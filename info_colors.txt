@@ -1,0 +1,14 @@
+Light:
+Light Default: #ffffff
+Light Dark: #e5e5e5
+Light Darker: #cccccc
+
+Dark:
+Dark Light: #333333
+Dark Default: #222222
+Dark Dark: #000000
+
+Primary:
+Primary Light: #ef8686
+Primary Default: #f0413c
+Primary Dark: #a32b2b

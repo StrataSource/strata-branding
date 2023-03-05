@@ -1,0 +1,4 @@
+Font used: Lexend Deca
+
+Main: Bold, 35pt, 0 VA
+Secondary: SemiBold, 15pt, 150 VA
