@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Strata Branding Tool</title>
+    </head>
+    <body style="background: #111; color: white">
+        <div>
+            <span>I want to use the</span>
+            <select id="brand">
+                <option value="strata">Strata</option>
+                <option value="strata-source">Strata Source</option>
+            </select>
+            <select id="color">
+                <option value="color">colored</option>
+                <option value="mono">monochrome</option>
+            </select>
+            <select id="type">
+                <option value="logo">Logo</option>
+                <option value="icon">Icon</option>
+            </select>
+            <select id="background">
+                <option value="ondark">on a dark background</option>
+                <option value="onlight">on a light background</option>
+                <option value="onimage">on an image background</option>
+            </select>
+        </div>
+        <div>
+            <img
+                alt="Image"
+                id="preview"
+                style="
+                    max-width: 30rem;
+                    max-height: 10rem;
+                    padding: 1rem;
+                    margin-top: 1rem;
+                    background-size: cover;
+                    background-position: center;
+                "
+            />
+            <br />
+            <a id="dl-link">Copy link</a>
+            <a id="dl-svg">Download SVG</a>
+            <a id="dl-ai">Download AI</a>
+        </div>
+
+        <script>
+            let dl_copy = document.getElementById("dl-link");
+            let dl_svg = document.getElementById("dl-svg");
+            let dl_ai = document.getElementById("dl-ai");
+
+            let baseURL = location.href.replace("/tool", "");
+
+            async function copyURL(url) {
+                await navigator.clipboard.writeText(url);
+                dl_copy.innerText = "Copied!";
+                setTimeout(() => (dl_copy.innerText = "Copy link"), 500);
+            }
+            function updateURL() {
+                let brand = document.getElementById("brand").value;
+                let color = document.getElementById("color").value;
+                let type = document.getElementById("type").value;
+                let background = document.getElementById("background").value;
+
+                let path = `/i/${brand}/${type}/${background.replace(
+                    "onimage",
+                    "ondark"
+                )}/${color}`;
+
+                let preview = document.getElementById("preview");
+                preview.src = "." + path + ".svg";
+
+                switch (background) {
+                    case "onlight":
+                        preview.style.backgroundImage =
+                            "linear-gradient(-45deg, #ffffff 0%, #cccccc 100%)";
+                        break;
+                    case "ondark":
+                        preview.style.backgroundImage =
+                            "linear-gradient(-45deg, #333333 0%, #000000 100%)";
+                        break;
+                    case "onimage":
+                        preview.style.backgroundImage =
+                            "url(https://source.unsplash.com/400x400?dark)";
+                        break;
+                }
+
+                dl_copy.href = `javascript:copyURL("${baseURL + path}.svg")`;
+                dl_svg.href = `${baseURL + path}.svg`;
+                dl_ai.href = `${baseURL + path}.ai`;
+
+                dl_svg.download = `${brand}-${type}-${color}-${background}.svg`;
+                dl_ai.download = `${brand}-${type}-${color}-${background}.ai`;
+            }
+
+            document.querySelectorAll("select").forEach((select) => {
+                select.addEventListener("change", updateURL);
+            });
+            updateURL();
+        </script>
+    </body>
+</html>
