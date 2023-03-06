@@ -47,9 +47,9 @@
         </div>
 
         <script>
-            let dl_copy = document.getElementById("dl-link");
-            let dl_svg = document.getElementById("dl-svg");
-            let dl_ai = document.getElementById("dl-ai");
+            let dl_copy = document.querySelector("#dl-link");
+            let dl_svg = document.querySelector("#dl-svg");
+            let dl_ai = document.querySelector("#dl-ai");
 
             let baseURL = location.href.replace("/tool", "");
 
@@ -59,17 +59,17 @@
                 setTimeout(() => (dl_copy.innerText = "Copy link"), 500);
             }
             function updateURL() {
-                let brand = document.getElementById("brand").value;
-                let color = document.getElementById("color").value;
-                let type = document.getElementById("type").value;
-                let background = document.getElementById("background").value;
+                let brand = document.querySelector("#brand").value;
+                let color = document.querySelector("#color").value;
+                let type = document.querySelector("#type").value;
+                let background = document.querySelector("#background").value;
 
                 let path = `/i/${brand}/${type}/${background.replace(
                     "onimage",
                     "ondark"
                 )}/${color}`;
 
-                let preview = document.getElementById("preview");
+                let preview = document.querySelector("#preview");
                 preview.src = "." + path + ".svg";
 
                 switch (background) {
