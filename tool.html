@@ -69,11 +69,36 @@
                 <div style="display:block;"><img src="toolicons/svg.svg" alt="SVG Icon"
                         style="height: 13px; color:#ffffff; margin-right: 4px;" />Download Responsive FavIcon</div>
             </a></div>
+
+        <h1>Palette</h1>
+        
+        <div>
+            <div class="color-block" onclick="copyToClipboard('#ef8686')"> #ef8686 </div>
+            <div class="color-block" onclick="copyToClipboard('#f0413c')"> #f0413c </div>
+            <div class="color-block" onclick="copyToClipboard('#a32b2b')"> #a32b2b </div>
+            <div class="color-block blackText" onclick="copyToClipboard('#ffffff')"> #ffffff </div>
+            <div class="color-block blackText" onclick="copyToClipboard('#e5e5e5')"> #e5e5e5 </div>
+            <div class="color-block blackText" onclick="copyToClipboard('#cccccc')"> #cccccc </div>
+            <div class="color-block" onclick="copyToClipboard('#333333')"> #333333 </div>
+            <div class="color-block" onclick="copyToClipboard('#222222')"> #222222 </div>
+            <div class="color-block" onclick="copyToClipboard('#000000')"> #000000 </div>
+        </div>
+        <p style="color:#555555; text-align: center;">Click to copy Hex!</p>
     </div>
 
 
 
     <script>
+
+        function copyToClipboard(color) {
+            const el = document.createElement('textarea');
+            el.value = color.slice(1); // remove the first character (#) from the color string
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+
         let dl_copy = document.querySelector("#dl-link");
         let dl_svg = document.querySelector("#dl-svg");
         let dl_ai = document.querySelector("#dl-ai");

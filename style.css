@@ -7,7 +7,7 @@ body {
 }
 
 .content {
-    margin: 100px auto;
+    margin: 18px auto;
     width: 50%;
     height: 50%;
 
@@ -67,10 +67,61 @@ select {
 
 h1 {
     font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .buttonIcon {
     height: 14px;
     color:#ffffff;
     margin-right: 4px;
+}
+
+
+/* PALETTE STYLING */
+
+.color-block {
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    margin: 1%;
+    border-radius: 4px;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 100px; /* equal to height of the color block */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.blackText {
+    color:#000000;
+}
+
+.color-block:nth-child(1) {
+    background-color: #ef8686;
+}
+.color-block:nth-child(2) {
+    background-color: #f0413c;
+}
+.color-block:nth-child(3) {
+    background-color: #a32b2b;
+}
+.color-block:nth-child(4) {
+    background-color: #ffffff;
+}
+.color-block:nth-child(5) {
+    background-color: #e5e5e5;
+}
+.color-block:nth-child(6) {
+    background-color: #cccccc;
+}
+.color-block:nth-child(7) {
+    background-color: #333333;
+}
+.color-block:nth-child(8) {
+    background-color: #222222; 
+}
+.color-block:nth-child(9) {
+    background-color: #000000;
 }
