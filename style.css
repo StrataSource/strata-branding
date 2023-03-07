@@ -69,3 +69,8 @@ h1 {
     font-weight: 700;
 }
 
+.buttonIcon {
+    height: 14px;
+    color:#ffffff;
+    margin-right: 4px;
+}
