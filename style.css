@@ -1,0 +1,71 @@
+body {
+    background-color: #111111; 
+    color: white;
+    padding: 18px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+}
+
+.content {
+    margin: 100px auto;
+    width: 50%;
+    height: 50%;
+
+}
+
+.border {
+    border: 3px solid #222222;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+select {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color:#ffffff;
+    background-color: #222222;
+    padding:4px 8px 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 100ms;
+}
+
+a:hover {
+    color:#ffffff;
+    background-color: #333333;
+}
+
+.buttoncenter {
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.containerButton {
+    width: auto;
+    display:block;
+    margin: 16px 4px 0 0;
+}
+
+.buttonsFlex {
+    display: flex;
+}
+
+
+select {
+    color:#ffffff;
+    background-color: #333333;
+    border-radius: 4px;
+    border: none;
+    font-size: 12pt;
+}
+
+h1 {
+    font-weight: 700;
+}
+
