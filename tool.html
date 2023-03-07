@@ -1,126 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="icon" href="i/favicon.svg" type="image/svg+xml">
-        <link rel="manifest" href="/manifest.webmanifest">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;700&display=swap" rel="stylesheet">
-        <title>Strata Branding Tool</title>
-    </head>
 
-    <body >
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="i/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;700&display=swap" rel="stylesheet">
+    <title>Strata Branding Tool</title>
+</head>
 
-        <div class="content">
+<body>
+
+    <div class="content">
         <h1>Interactive Strata Branding Tool</h1>
-            <div class="border">
-                <div>
-                    <span>I want to use the</span>
-                    <select id="brand">
-                        <option value="strata">Strata</option>
-                        <option value="strata-source">Strata Source</option>
-                    </select>
-                    <select id="color">
-                        <option value="color">colored</option>
-                        <option value="mono">monochrome</option>
-                    </select>
-                    <select id="type">
-                        <option value="logo">Logo</option>
-                        <option value="icon">Icon</option>
-                    </select>
-                    <select id="background">
-                        <option value="ondark">on a dark background</option>
-                        <option value="onlight">on a light background</option>
-                        <option value="onimage">on an image background</option>
-                    </select>
-                </div>
+        <div class="border">
+            <div>
+                <span>I want to use the</span>
+                <select id="brand">
+                    <option value="strata">Strata</option>
+                    <option value="strata-source">Strata Source</option>
+                </select>
+                <select id="color">
+                    <option value="color">colored</option>
+                    <option value="mono">monochrome</option>
+                </select>
+                <select id="type">
+                    <option value="logo">Logo</option>
+                    <option value="icon">Icon</option>
+                </select>
+                <select id="background">
+                    <option value="ondark">on a dark background</option>
+                    <option value="onlight">on a light background</option>
+                    <option value="onimage">on an image background</option>
+                </select>
+            </div>
 
-                <div>
-                    <img
-                        alt="Image"
-                        id="preview"
-                        style="
+            <div>
+                <img alt="Image" id="preview" style="
                             max-width: 30rem;
                             max-height: 10rem;
                             padding: 1rem;
                             margin-top: 1rem;
                             background-size: cover;
                             background-position: center;
-                        "
-                    />
-                    <br />
-                    <div class="buttonsFlex">
-                        <div class="containerButton"><a id="dl-link" class="buttoncenter"><div style="display:block;"><img src = "toolicons/link-variant.svg" alt="Copy Link Icon" style="height: 13px; color:#ffffff; margin-right: 4px;"/>Copy link</div></a></div>
-                        <div class="containerButton"><a id="dl-svg" class="buttoncenter"><div style="display:block;"><img src = "toolicons/svg.svg" alt="SVG Icon" style="height: 13px; color:#ffffff; margin-right: 4px;"/>Download SVG</div></a></div>
-                        <div class="containerButton"><a id="dl-ai" class="buttoncenter"><div style="display:block;"><img src = "toolicons/file-download.svg" alt="Illustrator File Download" style="height: 13px; color:#ffffff; margin-right: 4px;"/>Download AI</div></a></div>
-                    </div>
+                        " />
+                <br />
+                <div class="buttonsFlex">
+                    <div class="containerButton"><a id="dl-link" class="buttoncenter">
+                            <div style="display:block;"><img src="toolicons/link-variant.svg" alt="Copy Link Icon"
+                                    style="height: 13px; color:#ffffff; margin-right: 4px;" />Copy link</div>
+                        </a></div>
+                    <div class="containerButton"><a id="dl-svg" class="buttoncenter">
+                            <div style="display:block;"><img src="toolicons/svg.svg" alt="SVG Icon"
+                                    style="height: 13px; color:#ffffff; margin-right: 4px;" />Download SVG</div>
+                        </a></div>
+                    <div class="containerButton"><a id="dl-ai" class="buttoncenter">
+                            <div style="display:block;"><img src="toolicons/file-download.svg"
+                                    alt="Illustrator File Download"
+                                    style="height: 13px; color:#ffffff; margin-right: 4px;" />Download AI</div>
+                        </a></div>
                 </div>
             </div>
-
-                <div class="containerButton"><a href="./strata-branding/tool.html/i/favicon.svg" class="buttoncenter"><div style="display:block;"><img src = "toolicons/svg.svg" alt="SVG Icon" style="height: 13px; color:#ffffff; margin-right: 4px;"/>Download Responsive FavIcon</div></a></div>
-
         </div>
 
+        <div class="containerButton"><a href="./strata-branding/tool.html/i/favicon.svg" class="buttoncenter">
+                <div style="display:block;"><img src="toolicons/svg.svg" alt="SVG Icon"
+                        style="height: 13px; color:#ffffff; margin-right: 4px;" />Download Responsive FavIcon</div>
+            </a></div>
+    </div>
 
 
-        <script>
-            let dl_copy = document.querySelector("#dl-link");
-            let dl_svg = document.querySelector("#dl-svg");
-            let dl_ai = document.querySelector("#dl-ai");
 
-            let baseURL = location.href.replace("/tool", "");
+    <script>
+        let dl_copy = document.querySelector("#dl-link");
+        let dl_svg = document.querySelector("#dl-svg");
+        let dl_ai = document.querySelector("#dl-ai");
 
-            async function copyURL(url) {
-                await navigator.clipboard.writeText(url);
-                dl_copy.innerText = "Copied!";
-                setTimeout(() => (dl_copy.innerText = "Copy link"), 500);
-            }
-            function updateURL() {
-                let brand = document.querySelector("#brand").value;
-                let color = document.querySelector("#color").value;
-                let type = document.querySelector("#type").value;
-                let background = document.querySelector("#background").value;
+        let baseURL = location.href.replace("/tool", "");
 
-                let path = `/i/${brand}/${type}/${background.replace(
-                    "onimage",
-                    "ondark"
-                )}/${color}`;
+        async function copyURL(url) {
+            await navigator.clipboard.writeText(url);
+            dl_copy.innerText = "Copied!";
+            setTimeout(() => (dl_copy.innerText = "Copy link"), 500);
+        }
+        function updateURL() {
+            let brand = document.querySelector("#brand").value;
+            let color = document.querySelector("#color").value;
+            let type = document.querySelector("#type").value;
+            let background = document.querySelector("#background").value;
 
-                let preview = document.querySelector("#preview");
-                preview.src = "." + path + ".svg";
+            let path = `/i/${brand}/${type}/${background.replace(
+                "onimage",
+                "ondark"
+            )}/${color}`;
 
-                switch (background) {
-                    case "onlight":
-                        preview.style.backgroundImage =
-                            "linear-gradient(-45deg, #ffffff 0%, #cccccc 100%)";
-                        break;
-                    case "ondark":
-                        preview.style.backgroundImage =
-                            "linear-gradient(-45deg, #333333 0%, #000000 100%)";
-                        break;
-                    case "onimage":
-                        preview.style.backgroundImage =
-                            "url(https://source.unsplash.com/400x400?dark)";
-                        break;
-                }
+            let preview = document.querySelector("#preview");
+            preview.src = "." + path + ".svg";
 
-                dl_copy.href = `javascript:copyURL("${baseURL + path}.svg")`;
-                dl_svg.href = `${baseURL + path}.svg`;
-                dl_ai.href = `${baseURL + path}.ai`;
-
-                dl_svg.download = `${brand}-${type}-${color}-${background}.svg`;
-                dl_ai.download = `${brand}-${type}-${color}-${background}.ai`;
+            switch (background) {
+                case "onlight":
+                    preview.style.backgroundImage =
+                        "linear-gradient(-45deg, #ffffff 0%, #cccccc 100%)";
+                    break;
+                case "ondark":
+                    preview.style.backgroundImage =
+                        "linear-gradient(-45deg, #333333 0%, #000000 100%)";
+                    break;
+                case "onimage":
+                    preview.style.backgroundImage =
+                        "url(https://source.unsplash.com/400x400?dark)";
+                    break;
             }
 
-            document.querySelectorAll("select").forEach((select) => {
-                select.addEventListener("change", updateURL);
-            });
-            updateURL();
-        </script>
+            dl_copy.href = `javascript:copyURL("${baseURL + path}.svg")`;
+            dl_svg.href = `${baseURL + path}.svg`;
+            dl_ai.href = `${baseURL + path}.ai`;
 
-    </body>
+            dl_svg.download = `${brand}-${type}-${color}-${background}.svg`;
+            dl_ai.download = `${brand}-${type}-${color}-${background}.ai`;
+        }
+
+        document.querySelectorAll("select").forEach((select) => {
+            select.addEventListener("change", updateURL);
+        });
+        updateURL();
+    </script>
+
+</body>
+
 </html>
