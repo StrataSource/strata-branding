@@ -1,0 +1,27 @@
+@use '../shared/colors';
+@use '../shared/fonts';
+@use 'variables';
+
+:root {
+	box-sizing: border-box;
+	font-family: 'Work Sans', 'Helvetica', sans-serif;
+	font-weight: normal;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lexand Deca', 'Futura', sans-serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+body, html {
+	background-color: colors.$dark-400;
+	color: colors.$light-400;
+
+	margin: 0;
+	padding: 0;
+}

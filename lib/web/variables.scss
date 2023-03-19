@@ -1,0 +1,27 @@
+@use '../shared/colors';
+
+:root {
+	--light-300: #{colors.$light-300};
+	--light-400: #{colors.$light-400};
+	--light-500: #{colors.$light-500};
+	--light-600: #{colors.$light-600};
+	--light-700: #{colors.$light-700};
+
+	--dark-300: #{colors.$dark-300};
+	--dark-400: #{colors.$dark-400};
+	--dark-500: #{colors.$dark-500};
+	--dark-600: #{colors.$dark-600};
+	--dark-700: #{colors.$dark-700};
+
+	--strata-300: #{colors.$strata-300};
+	--strata-400: #{colors.$strata-400};
+	--strata-500: #{colors.$strata-500};
+	--strata-600: #{colors.$strata-600};
+	--strata-700: #{colors.$strata-700};
+
+	--p2ce-orange-300: #{colors.$p2ce-orange-300};
+	--p2ce-orange-400: #{colors.$p2ce-orange-400};
+	--p2ce-orange-500: #{colors.$p2ce-orange-500};
+	--p2ce-orange-600: #{colors.$p2ce-orange-600};
+	--p2ce-orange-600: #{colors.$p2ce-orange-600};
+}

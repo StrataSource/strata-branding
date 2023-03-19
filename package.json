@@ -1,0 +1,23 @@
+{
+	"name": "strata-global-kit",
+	"description": "An experimental global module for Strata's branding.",
+	"main": "lib/index.scss",
+	"files": [ "lib/**" ],
+	"private": "true",
+
+	"scripts": {
+		"test": "vite --open",
+		"build-web": "sass lib/web/index.scss:build/web/index.css",
+		"build-pano": "sass lib/pano/index.scss:build/pano/index.css"
+	},
+
+	"devDependencies": {
+		"sass": "^1.58.3",
+		"vite": "^4.1.4"
+	},
+
+	"dependencies": {
+		"@fontsource/lexend-deca": "^4.5.14",
+		"@fontsource/work-sans": "^4.5.14"
+	}
+}
