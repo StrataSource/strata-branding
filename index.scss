@@ -1,0 +1,66 @@
+@use './lib/web/index' as strata;
+@use './lib/shared/colors' as *;
+
+section {
+	border: 1px solid $dark-300;
+	padding: 10px;
+	margin: 10px;
+}
+
+header {
+	margin: 10px 10px -10px 10px;
+	font-size: 8pt;
+	color: $light-600;
+	font-weight: 500;
+}
+
+section.palettes {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 50px;
+
+	div.palette-dark {
+		background-image: linear-gradient(
+			90deg,
+			$dark-100 0%,  $dark-100 10%,
+			$dark-200 10%, $dark-200 20%,
+			$dark-300 20%, $dark-300 30%,
+			$dark-400 30%, $dark-400 40%,
+			$dark-500 40%, $dark-500 60%,
+			$dark-600 60%, $dark-600 70%,
+			$dark-700 70%, $dark-700 80%,
+			$dark-800 80%, $dark-800 90%,
+			$dark-900 90%, $dark-900 100%,
+		);
+	}
+
+	div.palette-light {
+		background-image: linear-gradient(
+			90deg,
+			$light-100 0%,  $light-100 10%,
+			$light-200 10%, $light-200 20%,
+			$light-300 20%, $light-300 30%,
+			$light-400 30%, $light-400 40%,
+			$light-500 40%, $light-500 60%,
+			$light-600 60%, $light-600 70%,
+			$light-700 70%, $light-700 80%,
+			$light-800 80%, $light-800 90%,
+			$light-900 90%, $light-900 100%,
+		);
+	}
+
+	div.palette-strata {
+		background-image: linear-gradient(
+			90deg,
+			$strata-100 0%,  $strata-100 10%,
+			$strata-200 10%, $strata-200 20%,
+			$strata-300 20%, $strata-300 30%,
+			$strata-400 30%, $strata-400 40%,
+			$strata-500 40%, $strata-500 60%,
+			$strata-600 60%, $strata-600 70%,
+			$strata-700 70%, $strata-700 80%,
+			$strata-800 80%, $strata-800 90%,
+			$strata-900 90%, $strata-900 100%,
+		);
+	}
+}

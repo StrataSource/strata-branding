@@ -1,11 +1,12 @@
-@use '../shared/colors';
+@use '../shared/colors' as *;
 @use '../shared/fonts';
 @use 'variables';
 
 :root {
 	box-sizing: border-box;
-	font-family: 'Work Sans', 'Helvetica', sans-serif;
+	font-family: fonts.$font-body;
 	font-weight: normal;
+	line-height: 1.5;
 }
 
 * {
@@ -13,15 +14,36 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lexand Deca', 'Futura', sans-serif;
+	font-family: fonts.$font-header;
 	font-weight: normal;
+
+	color: $light-300;
 	margin: 0;
 }
 
 body, html {
-	background-color: colors.$dark-400;
-	color: colors.$light-400;
+	background-color: $dark-500;
+	color: $light-500;
 
 	margin: 0;
 	padding: 0;
+}
+
+hr {
+	// Browser compat. Necessary for stylistic consistency.
+	$border-color: $dark-300;
+	color: #{$border-color};
+	border: 0.5px solid #{$border-color};
+	margin: 10px 0;
+}
+
+button {
+	background-color: $dark-300;
+	color: $light-500;
+
+	border: 1px solid $dark-200;
+	border-radius: 2px;
+
+	line-height: 26px;
+	padding: 0 14px;
 }

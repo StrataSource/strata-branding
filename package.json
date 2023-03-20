@@ -1,8 +1,8 @@
 {
 	"name": "strata-global-kit",
 	"description": "An experimental global module for Strata's branding.",
-	"main": "lib/index.scss",
-	"files": [ "lib/**" ],
+	"main": "lib/web/index.scss",
+	"files": [ "lib/**/*" ],
 	"private": "true",
 
 	"scripts": {
