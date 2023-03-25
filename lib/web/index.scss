@@ -1,5 +1,6 @@
 @use '../shared/colors' as *;
 @use '../shared/fonts';
+@use '../shared/elements';
 @use 'variables';
 
 :root {
@@ -7,19 +8,23 @@
 	font-family: fonts.$font-body;
 	font-weight: normal;
 	line-height: 1.5;
+	font-size: fonts.$font-size-body;
 }
 
-* {
-	box-sizing: inherit;
-}
+* { box-sizing: inherit }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: fonts.$font-header;
-	font-weight: normal;
-
+	font-weight: bold;
 	color: $light-300;
 	margin: 0;
 }
+
+h1 { font-size: fonts.$font-size-h1 }
+h3 { font-size: fonts.$font-size-h3 }
+h2 { font-size: fonts.$font-size-h2 }
+h4 { font-size: fonts.$font-size-h4 }
+h5 { font-size: fonts.$font-size-h5 }
+h6 { font-size: fonts.$font-size-h6 }
 
 body, html {
 	background-color: $dark-500;
@@ -37,13 +42,27 @@ hr {
 	margin: 10px 0;
 }
 
+@mixin button($color-a, $color-b) {
+	background-color: adjust-color($color: $color-b, $alpha: -0.75);
+	color: $color-a;
+
+	border: none;
+	border-radius: elements.$radius-med;
+
+	line-height: 32px;
+	padding: 0 16px;
+
+	font-size: fonts.$font-size-button;
+}
+
 button {
-	background-color: $dark-300;
-	color: $light-500;
+	@include button($light-500, $light-700);
+	&:hover { @include button($light-500, $light-800) }
+	&:active { background-color: transparent; }
+}
 
-	border: 1px solid $dark-200;
-	border-radius: 2px;
-
-	line-height: 26px;
-	padding: 0 14px;
+button[primary] {
+	@include button($strata-500, $strata-500);
+	&:hover { @include button($strata-500, $strata-600) }
+	&:active { background-color: transparent; }
 }

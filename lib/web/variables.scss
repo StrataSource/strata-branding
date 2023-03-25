@@ -1,27 +1,43 @@
 @use '../shared/colors';
 
 :root {
+	--light-100: #{colors.$light-100};
+	--light-200: #{colors.$light-200};
 	--light-300: #{colors.$light-300};
 	--light-400: #{colors.$light-400};
 	--light-500: #{colors.$light-500};
 	--light-600: #{colors.$light-600};
 	--light-700: #{colors.$light-700};
+	--light-800: #{colors.$light-800};
+	--light-900: #{colors.$light-900};
 
+	--dark-100: #{colors.$dark-100};
+	--dark-200: #{colors.$dark-200};
 	--dark-300: #{colors.$dark-300};
 	--dark-400: #{colors.$dark-400};
 	--dark-500: #{colors.$dark-500};
 	--dark-600: #{colors.$dark-600};
 	--dark-700: #{colors.$dark-700};
+	--dark-800: #{colors.$dark-800};
+	--dark-900: #{colors.$dark-900};
 
+	--strata-100: #{colors.$strata-100};
+	--strata-200: #{colors.$strata-200};
 	--strata-300: #{colors.$strata-300};
 	--strata-400: #{colors.$strata-400};
 	--strata-500: #{colors.$strata-500};
 	--strata-600: #{colors.$strata-600};
 	--strata-700: #{colors.$strata-700};
+	--strata-800: #{colors.$strata-800};
+	--strata-900: #{colors.$strata-900};
 
+	// --p2ce-orange-100: #{colors.$p2ce-orange-100};
+	// --p2ce-orange-200: #{colors.$p2ce-orange-200};
 	--p2ce-orange-300: #{colors.$p2ce-orange-300};
 	--p2ce-orange-400: #{colors.$p2ce-orange-400};
 	--p2ce-orange-500: #{colors.$p2ce-orange-500};
 	--p2ce-orange-600: #{colors.$p2ce-orange-600};
-	--p2ce-orange-600: #{colors.$p2ce-orange-600};
+	// --p2ce-orange-700: #{colors.$p2ce-orange-700};
+	// --p2ce-orange-800: #{colors.$p2ce-orange-800};
+	// --p2ce-orange-900: #{colors.$p2ce-orange-900};
 }

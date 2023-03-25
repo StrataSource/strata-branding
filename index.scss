@@ -1,5 +1,6 @@
 @use './lib/web/index' as strata;
 @use './lib/shared/colors' as *;
+@use './lib/shared/fonts';
 
 section {
 	border: 1px solid $dark-300;
@@ -9,9 +10,9 @@ section {
 
 header {
 	margin: 10px 10px -10px 10px;
-	font-size: 8pt;
-	color: $light-600;
-	font-weight: 500;
+	color: $light-800;
+	font-size: fonts.$font-size-h5;
+	font-weight: bold;
 }
 
 section.palettes {
