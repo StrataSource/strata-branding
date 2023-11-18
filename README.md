@@ -4,7 +4,7 @@ Images are be placed at `/i/[brand]/[type]/[background]/[color].[extension]`.
 
 | Field        | Description                                        | Possible values           |
 | ------------ | -------------------------------------------------- | ------------------------- |
-| `brand`      | What brand are you looking for?                    | `strata`, `strata-source` |
+| `brand`      | What brand are you looking for?                    | `strata`, `strata-source`, `powered-by-strata-source` |
 | `type`       | What sort of image do you want?                    | `icon`, `logo`            |
 | `background` | On which background will the image be displayed?\* | `onlight`, `ondark`       |
 | `color`      | Do you wish the image to be colored?               | `color`, `mono`           |
