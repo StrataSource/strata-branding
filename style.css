@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #111111; 
     color: white;
@@ -15,8 +22,9 @@ body {
 
 .border {
     border: 3px solid #222222;
-    padding: 18px;
+    padding: 20px;
     border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 select {
@@ -35,6 +43,32 @@ a {
     transition-duration: 100ms;
 }
 
+.preview {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+.preview.light {
+    background-image: linear-gradient(-45deg, #ffffff 0%, #cccccc 100%);
+}
+.preview.dark {
+    background-image: linear-gradient(-45deg, #333333 0%, #000000 100%)
+}
+.preview.image {
+    background-image: url(https://source.unsplash.com/400x400?dark);
+}
+
+.previewImage {
+    max-width: 15rem;
+    max-height: 4rem;
+}
+
 a:hover {
     color:#ffffff;
     background-color: #333333;
@@ -46,14 +80,9 @@ a:hover {
     align-items: center;
 }
 
-.containerButton {
-    width: auto;
-    display:block;
-    margin: 16px 4px 0 0;
-}
-
 .buttonsFlex {
     display: flex;
+    gap: 5px;
 }
 
 

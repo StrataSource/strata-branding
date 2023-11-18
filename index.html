@@ -25,6 +25,7 @@
 					<select id="brand">
 						<option value="strata">Strata</option>
 						<option value="strata-source">Strata Source</option>
+						<option value="powered-by-strata-source">Powered By Strata Source</option>
 					</select>
 					<select id="color">
 						<option value="color">colored</option>
@@ -42,40 +43,28 @@
 				</div>
 
 				<div>
-					<img
-						alt="Image"
-						id="preview"
-						style="
-							max-width: 30rem;
-							max-height: 10rem;
-							padding: 1rem;
-							margin-top: 1rem;
-							background-size: cover;
-							background-position: center;
-						"
-					/>
-					<br />
+					<div class="preview">
+						<img
+							alt="Image"
+							id="preview"
+							class="previewImage"
+						/>
+					</div>
 					<div class="buttonsFlex">
-						<div class="containerButton">
-							<a id="dl-link" class="buttoncenter">
-								<img src="toolicons/link-variant.svg" alt="Copy Link Icon" class="buttonIcon" />Copy
-								link
-							</a>
-						</div>
-						<div class="containerButton">
-							<a id="dl-svg" class="buttoncenter">
-								<img src="toolicons/svg.svg" alt="SVG Icon" class="buttonIcon" />Download SVG
-							</a>
-						</div>
-						<div class="containerButton">
-							<a id="dl-ai" class="buttoncenter">
-								<img
-									src="toolicons/file-download.svg"
-									alt="Illustrator File Download"
-									class="buttonIcon"
-								/>Download AI
-							</a>
-						</div>
+						<a id="dl-link" class="buttoncenter">
+							<img src="toolicons/link-variant.svg" alt="Copy Link Icon" class="buttonIcon" />Copy
+							link
+						</a>
+						<a id="dl-svg" class="buttoncenter">
+							<img src="toolicons/svg.svg" alt="SVG Icon" class="buttonIcon" />Download SVG
+						</a>
+						<a id="dl-ai" class="buttoncenter">
+							<img
+								src="toolicons/file-download.svg"
+								alt="Illustrator File Download"
+								class="buttonIcon"
+							/>Download AI
+						</a>
 					</div>
 				</div>
 			</div>
@@ -113,18 +102,23 @@
 
 				let path = `i/${brand}/${type}/${background.replace('onimage', 'ondark')}/${color}`;
 
-				let preview = document.querySelector('#preview');
-				preview.src = './' + path + '.svg';
+				let preview = document.querySelector('.preview');
+				let previewImage = preview.querySelector('img');
+				previewImage.src = './' + path + '.svg';
 
-				switch (background) {
-					case 'onlight':
-						preview.style.backgroundImage = 'linear-gradient(-45deg, #ffffff 0%, #cccccc 100%)';
+				preview.classList.remove("light");
+				preview.classList.remove("dark");
+				preview.classList.remove("image");
+
+				switch(background) {
+					case "onlight":
+						preview.classList.add("light");
 						break;
-					case 'ondark':
-						preview.style.backgroundImage = 'linear-gradient(-45deg, #333333 0%, #000000 100%)';
+					case "ondark":
+						preview.classList.add("dark");
 						break;
-					case 'onimage':
-						preview.style.backgroundImage = 'url(https://source.unsplash.com/400x400?dark)';
+					case "onimage":
+						preview.classList.add("image");
 						break;
 				}
 
