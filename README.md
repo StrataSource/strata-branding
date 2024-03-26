@@ -6,7 +6,7 @@ Images are be placed at `/i/[brand]/[type]/[background]/[color].[extension]`.
 | ------------ | -------------------------------------------------- | ------------------------------ |
 | `brand`      | What brand are you looking for?                    | `strata`, `strata-source`, `powered-by-strata-source` |
 | `type`       | What sort of image do you want?                    | `icon`, `logo`                 |
-| `background` | On which background will the image be displayed?\* | `onlight`, `ondark`, `agostic` |
+| `background` | On which background will the image be displayed?\* | `onlight`, `ondark`, `agnostic` |
 | `color`      | Do you wish the image to be colored?               | `color`, `mono`                |
 | `extension`  | This is self explanatory                           | `svg`, `ai`                    |
 
